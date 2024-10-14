@@ -1,0 +1,2 @@
+select * from INFORMATION_SCHEMA.TABLES
+where TABLE_TYPE = 'BASE TABLE' and TABLE_CATALOG = 'AdventureWorks2022';
