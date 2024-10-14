@@ -22,6 +22,12 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
+        <FileNode Name="Number of Tables.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-V7R78RP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-V7R78RP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Number of Tables.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery1.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-V7R78RP:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-V7R78RP</AssociatedConnSrvName>
