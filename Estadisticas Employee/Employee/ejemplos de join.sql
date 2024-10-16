@@ -87,3 +87,38 @@ on phone.BusinessEntityID = p.BusinessEntityID
 inner join Person.PhoneNumberType as phoneType
 on phoneType.PhoneNumberTypeID = phone.PhoneNumberTypeID
 where phoneType.Name = 'Home';
+
+-- EJERCICIO 3: Mostrar la dirección de facturación de los clientes franceses.
+
+select * from Sales.Customer;
+select * from Person.Person;
+select * from Sales.SalesTerritory;
+select * from Person.CountryRegion;
+select * from Person.Address;
+select * from Person.AddressType;
+
+select * from Person.Person as p
+inner join Sales.Customer as customer
+on customer.PersonID = p.BusinessEntityID
+inner join Sales.SalesTerritory as t
+on t.TerritoryID = customer.TerritoryID
+inner join Person.CountryRegion as country
+on country.CountryRegionCode = t.CountryRegionCode
+where country.Name = 'France';
+
+select p.FirstName, a.AddressLine1, atype.Name, country.Name from Person.Person as p
+left join Person.BusinessEntity as be
+on be.BusinessEntityID = p.BusinessEntityID
+left join Person.BusinessEntityAddress as bea
+on bea.BusinessEntityID = be.BusinessEntityID
+left join Person.Address as a
+on a.AddressID = bea.AddressID
+inner join Person.AddressType as atype
+on bea.AddressTypeID = atype.AddressTypeID
+inner join Sales.Customer as customer
+on customer.PersonID = p.BusinessEntityID
+inner join Sales.SalesTerritory as t
+on t.TerritoryID = customer.TerritoryID
+inner join Person.CountryRegion as country
+on country.CountryRegionCode = t.CountryRegionCode
+where atype.Name = 'Shipping';
