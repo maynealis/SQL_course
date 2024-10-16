@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Explorar tablas">
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Employee">
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
         <ConnectionNode Name="DESKTOP-V7R78RP:DESKTOP-V7R78RP\Alumne">
-          <Created>2024-10-14T12:14:19.7967358+02:00</Created>
+          <Created>2024-10-15T13:34:09.0895676+02:00</Created>
           <Type>SQL</Type>
           <Server>DESKTOP-V7R78RP</Server>
           <UserName />
@@ -22,35 +22,23 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="Number of Tables.sql">
+        <FileNode Name="ejemplos de join.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-V7R78RP:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-V7R78RP</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>Number of Tables.sql</FullPath>
+          <FullPath>ejemplos de join.sql</FullPath>
         </FileNode>
-        <FileNode Name="productos vendidos 2011.sql">
+        <FileNode Name="estadisticas por genero.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-V7R78RP:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-V7R78RP</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>productos vendidos 2011.sql</FullPath>
+          <FullPath>estadisticas por genero.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery1.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-V7R78RP:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-V7R78RP</AssociatedConnSrvName>
+        <FileNode Name="porcentajes_y_agrupaciones.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>SQLQuery1.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SQLQuery2.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-V7R78RP:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-V7R78RP</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>SQLQuery2.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SQLQuery3.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-V7R78RP:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-V7R78RP</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>SQLQuery3.sql</FullPath>
+          <FullPath>porcentajes_y_agrupaciones.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
