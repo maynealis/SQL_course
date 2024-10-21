@@ -17,6 +17,10 @@ conn = pyodbc.connect(conexion_str)
 cursor = conn.cursor()
 
 
+
+
+
+
 # ---------------------- RESPONDEMOS A LAS PREGUNTAS ----------------------
 comunidad = 'Andalucía'
 cursor.execute(f"""SELECT count(p.NameProv) AS NumeroProvincias
@@ -83,5 +87,26 @@ cursor.execute(f"""SELECT c.NameCom, count(p.NameProv) FROM comunidades as c
 print(f"9. Los nombres de las comunidades autónomas ordenada descendentemente por el número de sus provincias cuya población está entre 700 000 y 800 000 habitantes:")
 imprimir_2_col_just(cursor)
 # -------------------------------------------------------------------------
+cursor.execute("""SELECT NameCom from comunidades""")
+comunidades = []
+for row in cursor:
+    comunidades.append(row[0])
+comunidades_formateadas = "[" + "], [".join(comunidades) + "]"
+
+cursor.execute(f"""SELECT p.NameProv, {comunidades_formateadas}
+               FROM 
+                (provincias AS p
+                inner join comunidades AS c
+                on c.IDcom = p.IDcom
+                WHERE p.NumHabProv >= 1000000
+                )
+                pivot
+                (
+                sum(p.NumHabProv)
+                for Comunidad in ({comunidades_formateadas})    
+                ) 
+                ORDER BY p.NameProv""")
+
+print(cursor.fetchone())
 
 conn.close()
